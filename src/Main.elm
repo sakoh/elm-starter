@@ -3,6 +3,8 @@ module Main exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
+import Models exposing (..)
+import Update exposing (update)
 
 
 -- # Main
@@ -15,42 +17,6 @@ main =
         , view = view
         , update = update
         }
-
-
-
--- # Model
-
-
-type alias Model =
-    Int
-
-
-model : Model
-model =
-    0
-
-
-
--- # Messages
-
-
-type Msg
-    = Inc
-    | Dec
-
-
-
--- # Update
-
-
-update : Msg -> Model -> Model
-update msg model =
-    case msg of
-        Inc ->
-            model + 1
-
-        Dec ->
-            model - 1
 
 
 
